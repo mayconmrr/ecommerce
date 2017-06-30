@@ -1,0 +1,30 @@
+<div class="modal fade" id="sendMailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel"><%= t('labels.new_message') %></h4>
+      </div>
+      <div class="modal-body">
+        <%= form_tag(backoffice_send_mail_index_path, remote: true) do %> 
+          <div class="form-group">
+            <label for="recipient-text" class="control-label"><%= t('labels.recipient') %></label>
+            <%= text_field_tag(:'recipient-text', nil, class: "form-control", readonly: "readonly") %>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label"><%= t('labels.subject') %></label>
+            <%= text_field_tag(:'subject-text', nil, class: "form-control", required: "required") %>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label"><%= t('labels.message') %></label>
+            <%= text_area_tag(:'message-text', nil, class: "form-control", required: "required") %>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><%= t('buttons.close') %></button>
+          <%= submit_tag t('buttons.send_message'), class: "btn btn-primary" %>
+        </div> 
+        <% end %>
+    </div>
+  </div>
+</div> 

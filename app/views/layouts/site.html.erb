@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>EscamboApp</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    'site', media: 'all' %>
+  
+    <%= csrf_meta_tags %>      
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+  <div id="global-spin" class="loading" style="display: none;">Loading&#8230;</div>
+  <%= render partial: "layouts/site_shared/navigation" %>
+
+    <!-- Page Content -->
+    <div class="container">
+
+    <%= form_tag site_search_path, method: :get do %>
+
+      <div class="row">
+        <div class="well well-sm">
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+              <div class="input-group">
+                 <%= text_field_tag(:q, params[:q], { class:"form-control", placeholder:"Pesquisar por..." }) %>
+                <span class="input-group-btn">
+                   <%= submit_tag("Pesquisar", class:"btn btn-default") %>
+                </span>
+              </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 --> 
+            <div class="col-lg-3"></div>
+          </div><!-- /.row -->
+        </div>
+      </div>
+     <% end %>     
+        <div class="row"> 
+          <%= render partial: 'layouts/site_shared/sidebar' %> 
+            <div id="home-detail" class="col-md-9">  
+            <% if controller_path == 'site/home' %>  
+              <%= render partial: 'layouts/site_shared/carousel' %> 
+            <% end %> 
+                <div class="row"> 
+                  <%= yield %>    
+                </div> 
+            </div> 
+        </div> 
+    </div>
+    
+
+
+  <%= render partial: "layouts/site_shared/footer" %>
+
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'site' %>  
+
+  <%= render partial: 'layouts/shared/notifications' %>
+
+  
+</body>
+
+</html>

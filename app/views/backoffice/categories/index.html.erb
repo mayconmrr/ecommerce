@@ -1,0 +1,45 @@
+
+ <h1 class="page-header">Categorias</h1> 
+ 
+ <div class="panel panel-default">
+        <div class="panel-heading">
+            Listando Categorias
+            <%= link_to new_backoffice_category_path,
+                class:"btn btn-success btn-circle pull-right", style:"margin-top: -7px" do %>
+                <i class="fa fa-plus"></i>
+            <% end %>
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Descrição</th> 
+                            <th></th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% @categories.each do |category| %>
+                        <tr>
+                            <td><%= category.id %></td>
+                            <td><%= category.description %></td>
+                            <td style="width: 150px">
+                                <%= link_to edit_backoffice_category_path(category), class: "btn btn-primary btn-circle" do %>
+                                  <i class="fa fa-edit"></i>
+                                <% end %>                                         	
+                            	<button type="button" disabled="disabled" class="btn btn-danger btn-circle">
+                            	<i class="fa fa-minus"></i>
+                            	</button> 
+                            </td>
+
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.table-responsive -->
+        </div>
+        <!-- /.panel-body -->
+    </div>
