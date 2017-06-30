@@ -64,7 +64,8 @@ group :production do
   # Heroku
   gem 'pg' 
   gem 'rails_12factor'
-  gem 'faker'
+  gem 'faker' 
+  gem 'doctor_ipsum'
 end 
 
 group :development do 
