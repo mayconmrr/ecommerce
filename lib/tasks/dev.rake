@@ -5,7 +5,7 @@ namespace :dev do
   desc "Setup Development"
 
   task setup: :environment do
-    images_path = Rails.root.join('public', 'system')
+    images_path = Rails.root.join('app', 'assets', 'images')
 
     puts "Executando o setup para desenvolvimento ..."
   
