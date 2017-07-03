@@ -5,7 +5,7 @@ namespace :dev do
   desc "Setup Development"
 
   task setup: :environment do
-    images_path = Rails.root.join('app', 'assets', 'images')
+    images_path = Rails.root.join('public', 'system')
 
     puts "Executando o setup para desenvolvimento ..."
   
@@ -81,7 +81,7 @@ namespace :dev do
       category: Category.all.sample,
       price: "#{Random.rand(500)}, #{Random.rand(99)}",
       finish_date: Date.today + Random.rand(90),
-      picture: File.new(Rails.root.join('app', 'assets', 'images', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
+      picture: File.new(Rails.root.join('public', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
     )
     end
 
@@ -95,7 +95,7 @@ namespace :dev do
         category: Category.all.sample,
         price: "#{Random.rand(500)}, #{Random.rand(99)}",
         finish_date: Date.today + Random.rand(90),
-        picture: File.new(Rails.root.join('app', 'assets', 'images', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
+        picture: File.new(Rails.root.join('public', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
       )
     end
 
@@ -127,18 +127,3 @@ namespace :dev do
 end
 
 #####################################################################################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
