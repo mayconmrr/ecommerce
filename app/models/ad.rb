@@ -29,7 +29,7 @@ class Ad < ApplicationRecord
   scope :by_category, ->(id, page) { where(category: id).page(page).per(QTT_PER_PAGE) }
   
   scope :random, ->(quantity) {
-    if Rails.env.production?
+    if Rails.env.development?
       limit(quantity).order("RAND()") # MySQL/PostGree
     else
       limit(quantity).order("RANDOM()") # SQLite
