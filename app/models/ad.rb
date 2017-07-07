@@ -32,7 +32,7 @@ class Ad < ApplicationRecord
       limit(quantity).order("RANDOM()")
   }
 
-  scope :search, ->(term) { 
+  scope :search, ->(term, page) { 
     where("lower(title) LIKE ?", "%#{term.downcase}%").page(page).per(QTT_PER_PAGE)
   }
 
