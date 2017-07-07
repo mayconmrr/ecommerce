@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
   get 'backoffice', to: 'backoffice/dashboard#index' 
 
+  namespace :checkout do
+    resources :payments, only: [:create]
+    resources :notifications, only: [:create]
+  end
+
   namespace :backoffice do
     resources :send_mail, only: [:edit, :create]
     resources :categories, except: [:show, :destroy]  

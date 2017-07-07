@@ -22,6 +22,7 @@ gem 'kaminari-i18n'
 gem 'ratyrate'
 gem 'faker' 
 gem 'doctor_ipsum'
+gem 'pagseguro-oficial'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
@@ -45,6 +46,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'rails-erd'
   gem 'sqlite3'
+  gem 'rack-cors', :require => 'rack/cors'
 end
 
 

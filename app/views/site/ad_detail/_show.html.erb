@@ -1,13 +1,35 @@
 <div class="thumbnail">
-      <%= image_tag @ad.picture.url(:large), class:"img-responsive" %> 
+  <%= image_tag @ad.picture.url(:large), class:"img-responsive" %> 
     
-    <div class="caption-full">
-        <h4 class="pull-right"><%= humanized_money_with_symbol @ad.price %></h4>
-        <h4><a href="#"><%= @ad.title %></a>
-        </h4>
-        <%= @ad.description.html_safe %>
+  <div class="caption-full">
+    <h4 class="pull-right"><%= humanized_money_with_symbol @ad.price %></h4>
+
+      <% if @ad.active? %>
+
+        <% if member_signed_in? %>  
+          <div class="text-right">
+            <%= form_tag(checkout_payments_path) do %>
+            <%= hidden_field_tag :ad_id, @ad.id %>
+              <%= submit_tag "Comprar", class:"btn btn-success", data: { confirm: "Deseja realmente comprar este produto?"}%>
+            <% end %> 
+          </div>
+        <% else %>
+          <div class="text-right"> 
+            <%= link_to "Efetue o login para comprar", new_member_session_path, class:"btn btn-success"%>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="text-right"> 
+          <%= link_to "#{@ad.status_i18n}", '#', class:"btn btn-success", disabled: true %>
+        </div>
+      <% end %>
+
+
+      <h4><a href="#"><%= @ad.title %></a>
+    </h4>
+      <%= @ad.description.html_safe %>
     </div>
-</div>
+  </div>
  
     <div class="well well-sm">
       <div class="ratings"> 
@@ -37,7 +59,6 @@
 </div>
 
     <%= render partial: 'site/ad_detail/comment_modal' %> 
-d
 
 
 
