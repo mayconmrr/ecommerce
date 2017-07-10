@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
 
   post '/rate' => 'rater#create', :as => 'rate'
   get 'backoffice', to: 'backoffice/dashboard#index' 

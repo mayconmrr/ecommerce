@@ -22,6 +22,7 @@ gem 'kaminari-i18n'
 gem 'ratyrate'
 gem 'faker' 
 gem 'doctor_ipsum'
+gem 'sidekiq'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
