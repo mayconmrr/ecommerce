@@ -22,6 +22,9 @@ gem 'kaminari-i18n'
 gem 'ratyrate'
 gem 'faker' 
 gem 'doctor_ipsum'
+gem 'prawn-rails'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
