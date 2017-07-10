@@ -84,6 +84,14 @@ GEM
     devise-i18n (1.1.2)
     doctor_ipsum (0.3.1)
       i18n
+    elasticsearch (5.0.4)
+      elasticsearch-api (= 5.0.4)
+      elasticsearch-transport (= 5.0.4)
+    elasticsearch-api (5.0.4)
+      multi_json
+    elasticsearch-transport (5.0.4)
+      faraday
+      multi_json
     enum_help (0.0.17)
       activesupport (>= 3.0.0)
     erubis (2.7.0)
@@ -91,6 +99,8 @@ GEM
     execjs (2.7.0)
     faker (1.7.3)
       i18n (~> 0.5)
+    faraday (0.12.1)
+      multipart-post (>= 1.2, < 3)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
     foreman (0.84.0)
@@ -102,6 +112,7 @@ GEM
     haml (5.0.1)
       temple (>= 0.8.0)
       tilt
+    hashie (3.5.5)
     i18n (0.8.4)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -162,6 +173,7 @@ GEM
       money (~> 6.8.1)
       railties (>= 3.0)
     multi_json (1.12.1)
+    multipart-post (2.0.0)
     mustermann (1.0.0)
     nio4r (2.1.0)
     nokogiri (1.8.0)
@@ -247,6 +259,10 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    searchkick (2.3.1)
+      activemodel (>= 4.1)
+      elasticsearch (>= 1)
+      hashie
     sinatra (2.0.0)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -333,6 +349,7 @@ DEPENDENCIES
   redcarpet
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  searchkick
   spring
   sqlite3
   uglifier (>= 1.3.0)
@@ -340,4 +357,4 @@ DEPENDENCIES
   wiselinks
 
 BUNDLED WITH
-   1.14.6
+   1.15.1

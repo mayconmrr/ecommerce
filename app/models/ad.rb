@@ -1,5 +1,8 @@
 class Ad < ApplicationRecord
 
+  # Searchkick Gem
+  searchkick
+
   # Constants
   QTT_PER_PAGE = 6
 
@@ -32,9 +35,6 @@ class Ad < ApplicationRecord
       limit(quantity).order("RANDOM()")
   }
 
-  scope :search, ->(term) { 
-    where("lower(title) LIKE ?", "%#{term.downcase}%").page(page).per(QTT_PER_PAGE)
-  }
 
   # paperclip
   has_attached_file :picture, styles: { large: "800x300#",  medium: "320x150#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
