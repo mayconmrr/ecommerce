@@ -12,6 +12,10 @@
     <title>BachOffice - Escamboapp</title>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= stylesheet_link_tag    'backoffice', media: 'all' %>
+
+  
+    <%= javascript_include_tag 'charts' %>
+
     <%= csrf_meta_tags %>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,9 +34,8 @@
    <div id="page-wrapper">
      <div class="container-fluid">
        <div class="row">
-         <div class="clo-lg-12">
-
-              <%= yield %>
+         <div class="clo-lg-12"> 
+           <%= yield %>
         </div>
        </div>
      </div>

@@ -60,6 +60,7 @@ GEM
       jquery-rails
     builder (3.2.3)
     byebug (9.0.6)
+    chartkick (2.2.4)
     choice (0.2.0)
     climate_control (0.2.0)
     cocaine (0.5.8)
@@ -300,6 +301,7 @@ DEPENDENCIES
   better_errors
   bootstrap_sb_admin_base_v2
   byebug
+  chartkick
   coffee-rails (~> 4.1.0)
   devise
   devise-i18n
@@ -340,4 +342,4 @@ DEPENDENCIES
   wiselinks
 
 BUNDLED WITH
-   1.14.6
+   1.15.1
