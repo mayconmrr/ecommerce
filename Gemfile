@@ -20,7 +20,7 @@ gem 'wiselinks'
 gem 'kaminari'
 gem 'kaminari-i18n'
 gem 'ratyrate'
-gem 'faker' 
+gem 'faker'
 gem 'doctor_ipsum'
 
 source 'https://rails-assets.org' do
@@ -30,17 +30,17 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-animate-css'
   gem 'rails-assets-bootstrap-markdown'
   gem 'rails-assets-marked'
-end  
+end
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'jquery-rails' 
+gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc 
+gem 'sdoc', '~> 0.4.0', group: :doc
 
-group :development, :test do  
+group :development, :test do
   gem 'byebug'
   gem 'better_errors'
   gem 'rails-erd'
@@ -50,15 +50,14 @@ end
 
 group :production do
   # Heroku
-  gem 'pg' 
+  gem 'pg'
   gem 'rails_12factor'
-end 
+end
 
-group :development do 
+group :development do
   gem 'mailcatcher'
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0' 
+  gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-

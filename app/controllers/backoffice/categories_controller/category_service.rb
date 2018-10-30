@@ -1,5 +1,5 @@
 class Backoffice::CategoriesController::CategoryService
-  attr_accessor :category 
+  attr_accessor :category
 
   def self.create(params_category)
     @category = Category.new(params_category)
@@ -7,5 +7,5 @@ class Backoffice::CategoriesController::CategoryService
     	@category.save!
     end
     @category
-  end 
+  end
 end

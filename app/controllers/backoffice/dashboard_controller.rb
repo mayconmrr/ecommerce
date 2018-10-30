@@ -1,6 +1,3 @@
 class Backoffice::DashboardController < BackofficeController
-
-
-  def index
-  end
+  def index; end
 end
