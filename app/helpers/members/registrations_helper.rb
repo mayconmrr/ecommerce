@@ -1,2 +1,0 @@
-module Members::RegistrationsHelper
-end
