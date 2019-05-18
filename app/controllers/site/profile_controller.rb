@@ -1,3 +1,5 @@
-class Site::ProfileController < SiteController 
-   layout "profile"
+module Site
+  class ProfileController < SiteController
+    layout 'profile'
+  end
 end

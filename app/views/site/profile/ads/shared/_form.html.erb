@@ -1,16 +1,16 @@
-<%= content_for :javascripts do %> 
-    <%= javascript_include_tag 'site/profile/ads' %>
+<%= content_for :javascripts do %>
+  <%= javascript_include_tag 'site/profile/ads' %>
 <% end %>
 
 <% if @ad.errors.any? %>
- <div class="alert alert-danger alert-dismissable">
- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
- <ul>
-   <% @ad.errors.full_messages.each do |message| %>
-     <li><%= message %></li>
-   <% end %>
- </ul>
- </div>
+  <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+    <ul>
+      <% @ad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
 
 <%= form_for([:site, :profile, @ad], html: { multipart: true }) do |f| %>
@@ -22,7 +22,7 @@
         <%= f.text_field :title, class: "form-control", placeholder: "Título" %>
       </div>
     </div>
-  </div>  
+  </div>
 
   <div class="row">
     <div class="col-xs-4">
@@ -31,7 +31,7 @@
         <%= f.collection_select :category_id, Category.all, :id, :description, {}, { class: "form-control" } %>
       </div>
     </div>
-  </div>    
+  </div>
 
   <div class="row">
     <div class="col-xs-2">
@@ -43,29 +43,29 @@
         </div>
       </div>
     </div>
-  </div>  
+  </div>
 
   <div class="row">
     <div class="col-xs-3">
       <div class="form-group">
         <%= f.label :finish_date %>
-        <%= f.text_field :finish_date, class: "form-control datepicker", 
+        <%= f.text_field :finish_date, class: "form-control datepicker",
                           value: (l(@ad.finish_date) unless @ad.finish_date.blank?) %>
       </div>
     </div>
-  </div>    
+  </div>
 
   <div class="row">
     <div class="col-xs-6">
       <div class="form-group">
         <%= f.label :picture %> <br>
-        <% if @ad.picture.present? %> 
+        <% if @ad.picture.present? %>
           <%= image_tag @ad.picture(:medium), class: "img-thumbnail" %>
         <% end %>
         <%= f.file_field :picture, class: "btn" %>
       </div>
     </div>
-  </div> 
+  </div>
 
   <div class="row">
     <div class="col-xs-12">
@@ -74,7 +74,7 @@
         <%= f.text_area :description_short, class: "form-control", rows: 5 %>
       </div>
     </div>
-  </div>    
+  </div>
 
   <div class="row">
     <div class="col-xs-12">
@@ -83,16 +83,6 @@
         <%= f.text_area :description_md, class: "form-control", rows: 10 %>
       </div>
     </div>
-  </div>   
+  </div>
   <%= submit_tag "Enviar", class:"btn btn-default" %>
 <% end %>
-
-
-
-
-
-
-
-
-
-

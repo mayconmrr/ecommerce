@@ -6,7 +6,7 @@
         <h4 class="modal-title" id="exampleModalLabel"><%= t('labels.new_message') %></h4>
       </div>
       <div class="modal-body">
-        <%= form_tag(backoffice_send_mail_index_path, remote: true) do %> 
+        <%= form_tag(backoffice_send_mail_index_path, remote: true) do %>
           <div class="form-group">
             <label for="recipient-text" class="control-label"><%= t('labels.recipient') %></label>
             <%= text_field_tag(:'recipient-text', nil, class: "form-control", readonly: "readonly") %>
@@ -23,8 +23,8 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal"><%= t('buttons.close') %></button>
           <%= submit_tag t('buttons.send_message'), class: "btn btn-primary" %>
-        </div> 
-        <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
-</div> 
+</div>
