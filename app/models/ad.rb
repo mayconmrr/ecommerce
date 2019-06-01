@@ -1,5 +1,4 @@
 class Ad < ApplicationRecord
-
   # Constants
   QTT_PER_PAGE = 6
 
@@ -17,7 +16,6 @@ class Ad < ApplicationRecord
   # Validates
   validates :title, :description_md, :description_short, :category, presence: true
   validates :picture, :finish_date, presence: true
-
   validates :price, numericality: { greater_than: 0 }
 
   # Scopes
