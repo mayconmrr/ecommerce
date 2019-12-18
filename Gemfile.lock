@@ -94,7 +94,7 @@ GEM
     execjs (2.7.0)
     faker (1.9.3)
       i18n (>= 0.7)
-    ffi (1.11.0)
+    ffi (1.11.3)
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
     foreman (0.85.0)
@@ -180,7 +180,7 @@ GEM
     pg (1.1.4)
     pundit (2.0.1)
       activesupport (>= 3.0.0)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-protection (2.0.5)
       rack
     rack-test (0.6.3)
