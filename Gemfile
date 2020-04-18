@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
-gem 'rails'
+gem 'rails', ' 6.0.2.2'
+
 
 gem 'aws-sdk', '~> 2.3'
 gem 'bootstrap_sb_admin_base_v2'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'
 gem 'devise', ">= 4.7.1"
 gem 'devise-i18n'
 gem 'doctor_ipsum'
@@ -26,7 +27,6 @@ gem 'redcarpet'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'uglifier', '>= 1.3.0'
-gem 'wiselinks'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-animate-css'
@@ -41,7 +41,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'byebug'
   gem 'rails-erd'
-  gem 'sqlite3', '1.3.13'
+  gem 'sqlite3', '~> 1.3', '>= 1.3.6'
 end
 
 group :production do
@@ -52,6 +52,5 @@ end
 
 group :development do
   gem 'mailcatcher'
-  gem 'web-console', '~> 2.0'
   gem 'spring'
 end
