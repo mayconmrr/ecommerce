@@ -1,7 +1,7 @@
 
-//= require bootstrap_sb_admin_base_v2 
+//= require bootstrap_sb_admin_base_v2
 //= require bootbox
- 
+
  /*Sobrescreve o data-confirm do Rails */
 $.rails.allowAction = function(element) {
   var message = element.attr('data-confirm');
@@ -29,6 +29,5 @@ $.rails.allowAction = function(element) {
   };
 
   bootbox.confirm(opts);
-
   return false;
 }

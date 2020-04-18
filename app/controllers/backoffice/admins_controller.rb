@@ -5,8 +5,6 @@ module Backoffice
     after_action :verify_policy_scoped, only: :index
 
     def index
-      # @admins = Admin.all
-      # @admins = Admin.with_full_access
       @admins = policy_scope(Admin)
     end
 

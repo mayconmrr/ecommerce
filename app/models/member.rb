@@ -1,5 +1,4 @@
 class Member < ApplicationRecord
-
   # RatyRate gem
   ratyrate_rater
 

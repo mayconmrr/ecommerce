@@ -15,53 +15,39 @@
     <%= csrf_meta_tags %>
   </head>
 
-<body>
-  <%= render partial: "layouts/site_shared/navigation" %>
-
+  <body>
+    <%= render partial: "layouts/site_shared/navigation" %>
     <div id="wrapper">
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+            <a href="#">Start Bootstrap</a>
+          </li>
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
-                </li>
-                <li>
-                    <%= link_to "#{t('profile_menu.dashboard')}",
-                    site_profile_dashboard_index_path %>
-                </li>
-                <li>
-                    <%= link_to "#{t('profile_menu.my_ads')}", site_profile_ads_path %>
-                </li>
-                <li>
-                    <%= link_to "#{t('profile_menu.new_ad')}", new_site_profile_ad_path %>
-                </li>
-                <li>
-                    <%= link_to "#{t('profile_menu.my_data')}", edit_site_profile_my_datum_path(current_member.id) %>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
+          <li><%= link_to "#{t('profile_menu.dashboard')}",site_profile_dashboard_index_path %></li>
+          <li><%= link_to "#{t('profile_menu.my_ads')}", site_profile_ads_path %></li>
+          <li><%= link_to "#{t('profile_menu.new_ad')}", new_site_profile_ad_path %></li>
+          <li><%= link_to "#{t('profile_menu.my_data')}", edit_site_profile_my_datum_path(current_member.id) %></li>
+        </ul>
+      </div>
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-12">
-                <%= yield %>
-              </div>
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <%= yield %>
             </div>
           </div>
         </div>
+      </div>
     </div>
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'site' %>
     <%= javascript_include_tag 'site/profile' %>
     <%= yield :javascripts %>
+
     <%= render partial: 'layouts/shared/notifications' %>
   </body>
-
 </html>

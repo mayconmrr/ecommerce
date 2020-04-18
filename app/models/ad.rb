@@ -39,7 +39,7 @@ class Ad < ApplicationRecord
   # gem money-rails
   monetize :price_cents
 
-  def secodn
+  def second
     self[1]
   end
 
@@ -53,8 +53,8 @@ class Ad < ApplicationRecord
     options = {
       filter_html: true,
       link_attributes: {
-        rel: "nofollow",
-        target: "_blank"
+        rel: 'nofollow',
+        target: '_blank'
       }
     }
 
@@ -65,6 +65,6 @@ class Ad < ApplicationRecord
 
     renderer = Redcarpet::Render::HTML.new(options)
     markdown = Redcarpet::Markdown.new(renderer, extensions)
-    self.description = markdown.render(self.description_md).html_safe
+    self.description = markdown.render(description_md).html_safe
   end
 end
