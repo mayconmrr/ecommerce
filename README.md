@@ -1,12 +1,15 @@
-# Ruby on Rails - Ecommerce 
-This project was developed to show the main features of an ecommerce where is possible to 
-become a member (sign up) make login and to publish any itens that you want to sell.
+# Ruby on Rails - Ecommerce
+This project has the main features necessary to start an ecommerce.
+Registration, create ads to sell your product with pitcutures and description.
+You can also review the product after buy it.
+
+Also you have a backofficer where is possible to control the whole system.
 
 ## Ruby version
-ruby 2.3.0
+ruby 2.5.1
 
 ## Rails version
-Rails 5.0.2
+Rails 6.0.2
 
 ## System dependencies
 
@@ -27,19 +30,15 @@ sudo apt-get update
 sudo apt-get install graphviz
 ```
 
-
-## Setup 
-Run in your console: 
+## Setup
+Run in your console:
 ```
 bin/setup
 ```
-
 
 ## Rake Tasks
 
 Run in you console:
 ```
-rails dev:setup   
+rails dev:setup
 ```
-
-
