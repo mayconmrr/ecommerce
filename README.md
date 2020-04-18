@@ -5,6 +5,19 @@ You can also review the product after buy it.
 
 Also you have a backofficer where is possible to control the whole system.
 
+# Website Preview
+Ads Session
+
+![](app/assets/images/readme/website1.png)
+- - - - -
+![](app/assets/images/readme/website2.png)
+
+Backoffice Session
+
+![](app/assets/images/readme/back1.png)
+- - - - -
+![](app/assets/images/readme/back2.png)
+
 ## Ruby version
 ruby 2.5.1
 
@@ -42,12 +55,3 @@ Run in you console:
 ```
 rails dev:setup
 ```
-
-## Website Preview
-* Ads Session
-app/assets/images/readme/website1.png
-app/assets/images/readme/website2.png
-
-* Backoffice Session
-app/assets/images/readme/back1.png
-app/assets/images/readme/back2.png
