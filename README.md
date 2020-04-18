@@ -42,3 +42,12 @@ Run in you console:
 ```
 rails dev:setup
 ```
+
+## Website Preview
+* Ads Session
+app/assets/images/readme/website1.png
+app/assets/images/readme/website2.png
+
+* Backoffice Session
+app/assets/images/readme/back1.png
+app/assets/images/readme/back2.png
