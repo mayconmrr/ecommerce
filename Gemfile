@@ -4,7 +4,7 @@ gem 'rails'
 gem 'aws-sdk', '~> 2.3'
 gem 'bootstrap_sb_admin_base_v2'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'devise'
+gem 'devise', ">= 4.7.1"
 gem 'devise-i18n'
 gem 'doctor_ipsum'
 gem 'enum_help'
