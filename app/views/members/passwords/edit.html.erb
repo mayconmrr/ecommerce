@@ -33,7 +33,8 @@
   <%= javascript_tag "$.notify( { message: '#{value}'}, { type: 'danger', placement: { from: 'top', align: 'center' }});" %>
 <% end %>
 
-<% unless devise_error_messages!.blank? %>
+<% unless 'devise/shared/error_message'
+.blank? %>
   <% resource.errors.full_messages.each do |message| %>
       <%= javascript_tag "$.notify( { message: '#{message}'}, { type: 'danger', placement: { from: 'top', align: 'center' }});" %>
   <% end %>
