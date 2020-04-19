@@ -9,10 +9,16 @@
 </div>
 
 <div class="well">
-  <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#confirmationModal">
-    Finalizar Compra
-  </button>
-  <%= render 'confirmation' %>
+  <% if member_signed_in? %>
+    <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#confirmationModal">
+      Finalizar Compra
+    </button>
+    <%= render 'confirmation' %>
+  <% else %>
+    <div class="text-center">
+      <%= link_to "Efetue o login para comprar", new_member_session_path, class:"btn btn-danger" %>
+    </div>
+  <% end %>
 </div>
 
 <div class="well well-sm">
@@ -31,7 +37,7 @@
     </div>
   <% else %>
     <div class="text-right">
-      <%= link_to "Efetue o login para comentar", new_member_session_path, class:"btn btn-success" %>
+      <%= link_to "Efetue o login para comentar", new_member_session_path, class:"btn btn-primary" %>
     </div>
   <% end %>
   <hr>
