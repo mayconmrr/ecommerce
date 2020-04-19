@@ -8,6 +8,11 @@
   </div>
 </div>
 
+<div class="well">
+  <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#confirmationModal">Finalizar Compra</button>
+  <%= render 'confirmation' %>
+</div>
+
 <div class="well well-sm">
   <div class="ratings">
     <p class="pull-right"><%= @ad.rates('quality').count %> <%= t('labels.reviews') %></p>
@@ -18,9 +23,10 @@
 <div class="well">
   <% if member_signed_in? %>
     <div class="text-right">
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#commentModal">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#commentModal">
         Deixe um comentário
       </button>
+
     </div>
   <% else %>
     <div class="text-right">
@@ -28,6 +34,6 @@
     </div>
   <% end %>
   <hr>
-  <%= render partial: 'site/ad_detail/comments' %>
+  <%= render 'comments' %>
 </div>
-<%= render partial: 'site/ad_detail/comment_modal' %>
+<%= render 'comment_modal' %>
