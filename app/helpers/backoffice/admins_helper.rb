@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Backoffice
-  class AdminsHelper
+  module AdminsHelper
     OptionsForRoles = Struct.new(:id, :description)
 
     def options_for_roles
