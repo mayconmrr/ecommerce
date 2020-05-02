@@ -25,7 +25,8 @@ Admin.create!(
   email: 'admin@admin.com',
   password: '123456',
   password_confirmation: '123456',
-  role: 0)
+  role: 0
+)
 puts 'Administrador cadastrado com sucesso!'
 
 #############################################################

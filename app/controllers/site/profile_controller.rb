@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 module Site
   class ProfileController < SiteController
-    layout 'profile'
+    layout "profile"
   end
 end

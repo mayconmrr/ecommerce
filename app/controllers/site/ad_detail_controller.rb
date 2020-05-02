@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Site
   class AdDetailController < SiteController
     def show

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Backoffice
   class AdminsController < BackofficeController
     before_action :set_admin, only: %w[edit update destroy]

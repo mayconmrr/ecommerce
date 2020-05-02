@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Site::Profile::MyDataController < Site::ProfileController
   before_action :set_profile_member, only: %w[edit update]
 
@@ -5,7 +7,7 @@ class Site::Profile::MyDataController < Site::ProfileController
 
   def update
     if @profile_member.update(params_profile_member)
-      redirect_to edit_site_profile_my_datum_path(current_member.id), notice: 'Perfil atualizados com sucesso!'
+      redirect_to edit_site_profile_my_datum_path(current_member.id), notice: "Perfil atualizados com sucesso!"
     else
       render :edit
     end

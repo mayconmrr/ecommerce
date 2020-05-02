@@ -1,5 +1,6 @@
-class Admin < ApplicationRecord
+# frozen_string_literal: true
 
+class Admin < ApplicationRecord
   # Constants
   ROLES = { full_access: 0, restricted_access: 1 }.freeze
 

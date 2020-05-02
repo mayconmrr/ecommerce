@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Site
   class CategoriesController < SiteController
     def show

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Site::Profile::AdsController < Site::ProfileController
   before_action :set_ad, only: %w[edit update]
 
@@ -9,7 +11,7 @@ class Site::Profile::AdsController < Site::ProfileController
 
   def update
     if @ad.update(params_ad)
-      redirect_to site_profile_ads_path, notice: 'Anúncio atualizado com sucesso!'
+      redirect_to site_profile_ads_path, notice: "Anúncio atualizado com sucesso!"
     else
       render :edit
     end
@@ -23,7 +25,7 @@ class Site::Profile::AdsController < Site::ProfileController
     @ad = Ad.new(params_ad)
     @ad.member = current_member
     if @ad.save
-      redirect_to site_profile_ads_path, notice: 'Anúncio criado com sucesso'
+      redirect_to site_profile_ads_path, notice: "Anúncio criado com sucesso"
     else
       render :new
     end

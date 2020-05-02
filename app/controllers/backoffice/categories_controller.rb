@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Backoffice
   class CategoriesController < BackofficeController
     before_action :set_category, only: %w[edit update]

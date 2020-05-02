@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Site
   class CommentsController < ApplicationController
     before_action :authenticate_member!
@@ -7,9 +9,9 @@ module Site
       @comment.member = current_member
 
       if @comment.save
-        redirect_to site_ad_detail_path(@comment.ad_id), notice: 'Comentário adicionado!'
+        redirect_to site_ad_detail_path(@comment.ad_id), notice: "Comentário adicionado!"
       else
-        redirect_to site_ad_detail_path(@comment.ad_id), notice: 'Erro ao adicionar comentário!'
+        redirect_to site_ad_detail_path(@comment.ad_id), notice: "Erro ao adicionar comentário!"
       end
     end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Member < ApplicationRecord
   # RatyRate gem
   ratyrate_rater
@@ -16,7 +18,7 @@ class Member < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   def nested_attributes
-    errors.add(:base, 'É necessário preencer os campos Primeiros e Segundo nome.') if nested_attributes_blank?
+    errors.add(:base, "É necessário preencer os campos Primeiros e Segundo nome.") if nested_attributes_blank?
   end
 
   def nested_attributes_blank?

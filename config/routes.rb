@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get 'backoffice', to: 'backoffice/dashboard#index'
 
   namespace :backoffice do
-    resources :send_mail, only: [:edit, :create]
-    resources :categories, except: [:show, :destroy]
+    resources :send_mail, only: %i[edit create]
+    resources :categories, except: %i[show destroy]
     resources :admins, except: [:show]
     resources :diagrams, only: [:index]
     get 'dashboard', to: 'dashboard#index'
@@ -17,11 +17,11 @@ Rails.application.routes.draw do
 
     namespace :profile do
       resources :dashboard, only: [:index]
-      resources :ads, only: [:index, :edit, :update, :new, :create]
-      resources :my_data, only: [:edit, :update]
+      resources :ads, only: %i[index edit update new create]
+      resources :my_data, only: %i[edit update]
     end
 
-    resources :ad_detail, only: [:index, :show]
+    resources :ad_detail, only: %i[index show]
     resources :categories, only: [:show]
     resources :comments, only: [:create]
   end

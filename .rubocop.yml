@@ -1,0 +1,15 @@
+inherit_gem:
+  rubocop-rails_config:
+    - config/rails.yml
+
+Layout/LineLength:
+  Enabled: true
+  Max: 100
+  Include:
+    - 'app/**/*'
+
+Layout/IndentationConsistency:
+  EnforcedStyle: normal
+
+Layout/EmptyLinesAroundAccessModifier:
+  EnforcedStyle: around

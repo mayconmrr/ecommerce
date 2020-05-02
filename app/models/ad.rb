@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class Ad < ApplicationRecord
   # Constants
   QTT_PER_PAGE = 6
 
   # RatyRate gem
-  ratyrate_rateable 'quality'
+  ratyrate_rateable "quality"
 
   # Callbacks
   before_save :md_to_html
@@ -26,14 +28,14 @@ class Ad < ApplicationRecord
   scope :to_the, ->(member) { where(member: member) }
   scope :by_category, ->(id, page) { where(category: id).page(page).per(QTT_PER_PAGE) }
 
-  scope :random, ->(quantity) { limit(quantity).order('RANDOM()') }
+  scope :random, ->(quantity) { limit(quantity).order("RANDOM()") }
 
   scope :search, ->(term, page) {
-    where('lower(title) LIKE ?', "%#{term.downcase}%").page(page).per(QTT_PER_PAGE)
+    where("lower(title) LIKE ?", "%#{term.downcase}%").page(page).per(QTT_PER_PAGE)
   }
 
   # paperclip
-  has_attached_file :picture, styles: { large: '800x300#',  medium: '320x150#', thumb: '100x100>' }, default_url: '/images/:style/missing.png'
+  has_attached_file :picture, styles: { large: "800x300#",  medium: "320x150#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
 
   # gem money-rails
@@ -53,8 +55,8 @@ class Ad < ApplicationRecord
     options = {
       filter_html: true,
       link_attributes: {
-        rel: 'nofollow',
-        target: '_blank'
+        rel: "nofollow",
+        target: "_blank"
       }
     }
 
