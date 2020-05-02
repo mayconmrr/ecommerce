@@ -18,7 +18,7 @@ module Members
         keys:
           [
             :email, :password, :password_confirmation,
-            profile_member_attributes: [:first_name, :second_name]
+            profile_member_attributes: %i[first_name second_name]
           ]
       )
     end

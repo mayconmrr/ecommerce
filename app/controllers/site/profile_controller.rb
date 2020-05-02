@@ -2,6 +2,6 @@
 
 module Site
   class ProfileController < SiteController
-    layout "profile"
+    layout 'profile'
   end
 end

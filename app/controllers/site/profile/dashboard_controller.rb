@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
-class Site::Profile::DashboardController < Site::ProfileController
-  def index; end
+module Site
+  module Profile
+    class DashboardController < Site::ProfileController
+      def index; end
+    end
+  end
 end

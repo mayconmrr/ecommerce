@@ -15,7 +15,8 @@ module Backoffice
     def create
       @category = CategoryService.create(paramas_category)
       if @category.save
-        redirect_to backoffice_categories_path, notice: "A categoria (#{@category.description}) foi cadastrada com sucesso."
+        redirect_to backoffice_categories_path,
+                    notice: "A categoria (#{@category.description}) foi cadastrada com sucesso."
       else
         render :new
       end
@@ -25,7 +26,8 @@ module Backoffice
 
     def update
       if @category.update(paramas_category)
-        redirect_to backoffice_categories_path, notice: "A categoria (#{@category.description}) foi atualizada com sucesso."
+        redirect_to backoffice_categories_path,
+                    notice: "A categoria (#{@category.description}) foi atualizada com sucesso."
       else
         render :edit
       end

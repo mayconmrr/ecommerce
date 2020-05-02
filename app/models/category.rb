@@ -6,10 +6,10 @@ class Category < ApplicationRecord
   friendly_id :description, use: :slugged
 
   # Associations
-  has_many :ads
+  has_many :ads, dependent: :destroy
 
   # Validations
-  validates_presence_of :description
+  validates :description, presence: true
 
   # Scopes
   scope :order_by_description, -> { order(:description) }

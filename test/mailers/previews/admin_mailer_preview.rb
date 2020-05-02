@@ -6,6 +6,6 @@ class AdminMailerPreview < ActionMailer::Preview
   end
 
   def send_message
-    AdminMailer.send_message(Admin.first.email, Admin.last.email, "Subject Test", "Loren loren...")
+    AdminMailer.send_message(Admin.first.email, Admin.last.email, 'Subject Test', 'Loren loren...')
   end
 end

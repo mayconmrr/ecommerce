@@ -1,4 +1,6 @@
-class CreateRatingCaches < ActiveRecord::Migration
+# frozen_string_literal: true
+
+class CreateRatingCaches < ActiveRecord::Migration[6.0]
   def self.up
     create_table :rating_caches do |t|
       t.belongs_to :cacheable, polymorphic: true
@@ -9,7 +11,7 @@ class CreateRatingCaches < ActiveRecord::Migration
     end
 
     add_index :rating_caches, %i[cacheable_id cacheable_type]
-    end
+  end
 
   def self.down
     drop_table :rating_caches

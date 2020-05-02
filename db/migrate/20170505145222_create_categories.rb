@@ -1,4 +1,6 @@
-class CreateCategories < ActiveRecord::Migration[5.0]
+# frozen_string_literal: true
+
+class CreateCategories < ActiveRecord::Migration[6.0]
   def change
     create_table :categories do |t|
       t.string :description, limit: 60

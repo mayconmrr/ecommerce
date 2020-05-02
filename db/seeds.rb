@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 #############################################################
 # Cadastro de categorias
-puts 'Cadastrando as Categorias...'
+Rails.logger.info('Cadastrando as Categorias...')
 categories = ['Animais e acessórios',
               'Esportes',
               'Para a sua casa',
@@ -15,11 +17,11 @@ categories = ['Animais e acessórios',
 categories.each do |category|
   Category.friendly.find_or_create_by!(description: category)
 end
-puts 'Categorias cadastradas com sucesso!'
+Rails.logger.info('Categorias cadastradas com sucesso!')
 
 #############################################################
-# Cadastra do Administrado Padrão.
-puts 'Cadastrando Administrador Padrão...'
+# Cadastro do Administrado Padrao.
+Rails.logger.info('Cadastrando Administrador Padrão...')
 Admin.create!(
   name: 'Administrador Geral',
   email: 'admin@admin.com',
@@ -27,11 +29,11 @@ Admin.create!(
   password_confirmation: '123456',
   role: 0
 )
-puts 'Administrador cadastrado com sucesso!'
+Rails.logger.info('Administrador cadastrado com sucesso!')
 
 #############################################################
-# Cadastra do Administrado Padrão.
-puts 'Cadastrando Membro Padrão...'
+# Cadastra do Administrado Padrao.
+Rails.logger.info('Cadastrando Membro Padrão...')
 member = Member.new(
   email: 'membro@membro.com',
   password: '123456',
@@ -41,4 +43,4 @@ member.build_profile_member
 member.profile_member.first_name = Faker::Name.first_name
 member.profile_member.second_name = Faker::Name.last_name
 member.save!
-puts 'Membro Padrão cadastrado com sucesso!'
+Rails.logger.info('Membro Padrão cadastrado com sucesso!')

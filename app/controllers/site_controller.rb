@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 class SiteController < ApplicationController
-  layout "site"
+  layout 'site'
 end

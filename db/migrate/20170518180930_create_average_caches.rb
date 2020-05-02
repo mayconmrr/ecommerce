@@ -1,4 +1,6 @@
-class CreateAverageCaches < ActiveRecord::Migration
+# frozen_string_literal: true
+
+class CreateAverageCaches < ActiveRecord::Migration[6.0]
   def self.up
     create_table :average_caches do |t|
       t.belongs_to :rater

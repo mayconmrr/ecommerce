@@ -1,4 +1,6 @@
-class CreateOverallAverages < ActiveRecord::Migration
+# frozen_string_literal: true
+
+class CreateOverallAverages < ActiveRecord::Migration[6.0]
   def self.up
     create_table :overall_averages do |t|
       t.belongs_to :rateable, polymorphic: true

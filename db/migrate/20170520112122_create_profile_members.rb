@@ -1,4 +1,6 @@
-class CreateProfileMembers < ActiveRecord::Migration[5.0]
+# frozen_string_literal: true
+
+class CreateProfileMembers < ActiveRecord::Migration[6.0]
   def change
     create_table :profile_members do |t|
       t.string :first_name

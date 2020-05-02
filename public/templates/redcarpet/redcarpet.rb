@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 options = {
   filter_html: true,
   link_attributes: {
@@ -14,14 +16,14 @@ extensions = {
 renderer = Redcarpet::Render::HTML.new(options)
 markdown = Redcarpet::Markdown.new(renderer, extensions)
 
-text = <<EOF
-# Hello
+text = <<~EOF
+  # Hello
 
-* 1 - Coffee
-* 2 - Rice
-* 3 - Chocolate
+  * 1 - Coffee
+  * 2 - Rice
+  * 3 - Chocolate
 
-Ruby on **Rails**
+  Ruby on **Rails**
 EOF
 
-markdown.render(text).html_safe
+safe_join(markdown.render(text))

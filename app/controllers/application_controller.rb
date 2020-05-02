@@ -18,17 +18,17 @@ class ApplicationController < ActionController::Base
 
   def layout_by_resource
     if devise_controller? && resource_name == :admin
-      "backoffice_devise"
+      'backoffice_devise'
     elsif devise_controller? && resource_name == :member
-      "site_devise"
+      'site_devise'
     else
-      "application"
+      'application'
     end
   end
 
   def user_not_authorized
-    flash[:alert] = "Você não está autorizdo a executar esta ação."
-    redirect_to(request.referrer || root_path)
+    flash[:alert] = 'Você não está autorizdo a executar esta ação.'
+    redirect_to(request.referer || root_path)
   end
 
   private

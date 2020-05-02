@@ -18,7 +18,8 @@ module Backoffice
     def create
       @admin = Admin.new(params_admin)
       if @admin.save
-        redirect_to backoffice_admins_path, notice: "O Administrador (#{@admin.email}) foi cadastrado com sucesso."
+        redirect_to backoffice_admins_path,
+                    notice: "O Administrador (#{@admin.email}) foi cadastrado com sucesso."
       else
         render :new
       end
@@ -29,7 +30,8 @@ module Backoffice
     def update
       if @admin.update(params_admin)
         AdminMailer.update_email(current_admin, @admin).deliver_now
-        redirect_to backoffice_admins_path, notice: "O Administrador (#{@admin.email}) foi atualizado com sucesso."
+        redirect_to backoffice_admins_path,
+                    notice: "O Administrador (#{@admin.email}) foi atualizado com sucesso."
       else
         render :edit
       end
@@ -39,7 +41,8 @@ module Backoffice
       authorize @admin
 
       if @admin.destroy
-        redirect_to backoffice_admins_path, notice: "O Administrador (#{@admin.email}) foi excluído com sucesso."
+        redirect_to backoffice_admins_path,
+                    notice: "O Administrador (#{@admin.email}) foi excluído com sucesso."
       else
         render :index
       end

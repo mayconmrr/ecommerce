@@ -6,11 +6,11 @@ module ApplicationHelper
   end
 
   def devise_sign_in?
-    params[:controller] == "members/sessions" ? "" : "display:none;"
+    params[:controller] == 'members/sessions' ? '' : 'display:none;'
   end
 
   def devise_sign_up?
-    params[:controller] == "members/registrations" ? "" : "display:none;"
+    params[:controller] == 'members/registrations' ? '' : 'display:none;'
   end
 
   def review_label(ad)

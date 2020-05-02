@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
-class Backoffice::DashboardController < BackofficeController
-  def index; end
+module Backoffice
+  class DashboardController < BackofficeController
+    def index; end
+  end
 end

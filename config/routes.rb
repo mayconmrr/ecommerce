@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'site/home#index'
   post '/rate' => 'rater#create', :as => 'rate'
@@ -14,13 +16,11 @@ Rails.application.routes.draw do
   namespace :site do
     get 'home', to: 'home#index'
     get 'search', to: 'search#ads'
-
     namespace :profile do
       resources :dashboard, only: [:index]
       resources :ads, only: %i[index edit update new create]
       resources :my_data, only: %i[edit update]
     end
-
     resources :ad_detail, only: %i[index show]
     resources :categories, only: [:show]
     resources :comments, only: [:create]
