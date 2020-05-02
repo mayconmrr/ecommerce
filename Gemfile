@@ -56,6 +56,5 @@ group :production do
 end
 
 group :development do
-  gem "mailcatcher"
   gem "spring"
 end
