@@ -2,7 +2,7 @@
 
 module Backoffice
   module CategoriesController
-    class CategoryService
+    class CategoryService < BackofficeController
       attr_accessor :category
 
       def self.create(params_category)
