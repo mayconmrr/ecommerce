@@ -1,5 +1,5 @@
 # Ruby on Rails - Ecommerce
-This project has the main features necessary to start an ecommerce project.
+This project has the main necessary features to start an ecommerce project.
 
 User registration, ads creation (you can create an add with pitcutures and description to sell your products) and review session for buyers.
 It also has a backoffice session where is possible to control the whole system.
