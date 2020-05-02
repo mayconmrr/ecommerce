@@ -4,7 +4,8 @@ source "https://rubygems.org"
 ruby '2.7.0'
 gem "rails", " 6.0.2.2"
 
-gem "aws-sdk", "~> 2.3"
+gem "aws-sdk"
+gem 'aws-sdk-s3'
 gem "bootstrap_sb_admin_base_v2"
 gem "coffee-rails"
 gem "devise", ">= 4.7.1"
