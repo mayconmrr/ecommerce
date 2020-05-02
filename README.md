@@ -1,9 +1,8 @@
 # Ruby on Rails - Ecommerce
-This project has the main features necessary to start an ecommerce.
-Registration, create ads to sell your product with pitcutures and description.
-You can also review the product after buy it.
+This project has the main features necessary to start an ecommerce project.
 
-Also you have a backofficer where is possible to control the whole system.
+User registration, ads creation (you can create an add with pitcutures and description to sell your products) and review session for buyers.
+It also has a backoffice session where is possible to control the whole system.
 
 # Website Preview
 Ads Session
@@ -36,7 +35,7 @@ sudo apt-get update
 sudo apt-get install imagemagick libmagickwand-dev
 ```
 
-* Graphviz (https://www.graphviz.org) - Apenas para Ambiente de Desenvolvimento
+* Graphviz (https://www.graphviz.org)
 
 ```
 sudo apt-get update
