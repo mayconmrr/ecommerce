@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
+ruby '2.7.0'
 gem "rails", " 6.0.2.2"
 
 gem "aws-sdk", "~> 2.3"
