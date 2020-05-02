@@ -12,4 +12,9 @@ module ApplicationHelper
   def devise_sign_up?
     params[:controller] == "members/registrations" ? "" : "display:none;"
   end
+
+  def review_label(ad)
+    number_of_reviews = ad.rates('quality').count
+    'review'.pluralize(number_of_reviews)
+  end
 end

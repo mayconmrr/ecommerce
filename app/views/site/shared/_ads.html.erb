@@ -4,13 +4,11 @@
       <%= image_tag ad.picture.url(:medium) %>
         <div class="caption", style="height: 100px;">
           <h4 class="pull-right"><%= humanized_money_with_symbol ad.price %></h4>
-          <h4>
-            <%= link_to truncate(ad.title, length: 20), site_ad_detail_path(ad) %>
-          </h4>
+          <h4><%= link_to truncate(ad.title, length: 15), site_ad_detail_path(ad) %></h4>
           <p><%= truncate(ad.description_short, length: 100) %></p>
         </div>
       <div class="ratings", style="padding: 5px;">
-        <p class="pull-right"><%= ad.rates('quality').count %> <%= t('labels.reviews') %></p>
+        <p class="pull-right"><%= ad.rates('quality').count %> <%= t("labels.#{review_label(ad)}") %></p>
         <%= rating_for ad, 'quality', star_path: '/images/ratyrate' %>
       </div>
     </div>
