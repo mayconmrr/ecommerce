@@ -18,7 +18,7 @@ Backoffice Session
 ![](app/assets/images/readme/back2.png)
 
 ## Ruby version
-ruby 2.5.1
+ruby 2.7.0
 
 ## Rails version
 Rails 6.0.2
