@@ -2,8 +2,9 @@
 
 source 'https://rubygems.org'
 ruby '2.7.0'
-gem 'rails', ' 6.0.2.2'
+gem 'rails', '~> 6.0'
 
+# gem "actionpack", ">= 6.0.3.1"
 gem 'aws-sdk'
 gem 'aws-sdk-s3'
 gem 'bootstrap_sb_admin_base_v2'
@@ -18,7 +19,7 @@ gem 'friendly_id'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'kaminari'
+gem 'kaminari', '>= 1.2.1'
 gem 'kaminari-i18n'
 gem 'lerolero_generator'
 gem 'money-rails'
