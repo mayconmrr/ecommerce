@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 ruby '2.7.0'
 gem 'rails', '~> 6.0'
 
-# gem "actionpack", ">= 6.0.3.1"
 gem 'aws-sdk'
 gem 'aws-sdk-s3'
 gem 'bootstrap_sb_admin_base_v2'
